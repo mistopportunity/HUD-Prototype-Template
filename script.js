@@ -38,7 +38,9 @@ imageLoader.onload = () => {
             uiElements.style.left = 0;
         }
 
-        uiElements.style.fontSize = (actualRatio * 10) / window.devicePixelRatio + "px";
+        console.log(((uiElements.clientWidth / width) * 10) / window.devicePixelRatio + "px");
+
+        uiElements.style.fontSize = ((uiElements.clientWidth / width) * 10) / window.devicePixelRatio + "px";
 
     }:() => {
 
@@ -56,7 +58,7 @@ imageLoader.onload = () => {
             uiElements.style.height = premultipledHeight + "vw";
         }
 
-        uiElements.style.fontSize = (actualRatio * 10) / window.devicePixelRatio + "px";
+        uiElements.style.fontSize = ((uiElements.clientWidth / width) * 10) / window.devicePixelRatio + "px";
     };
     
     updateBoxedMode();
