@@ -26,7 +26,7 @@ imageLoader.onload = () => {
     const ratio = width / height;
 
     const updateFontSize = newWidth => {
-        uiElements.style.fontSize = ((newWidth / width) * 10) / window.devicePixelRatio + "px";
+        uiElements.style.fontSize = ((newWidth / width) * 10) + "px";
     }
 
     
